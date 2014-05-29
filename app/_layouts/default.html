@@ -58,8 +58,8 @@
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
-                    <li class="services"><a href="/services">Services</a></li>
-                    <li class="products"><a href="/products">Products</a></li>
+                    <li class="services"><a>Services</a></li>
+                    <li class="products"><a>Products</a></li>
                     <li><a href="/news">News</a></li>
                 </ul>
             </nav>
@@ -101,7 +101,7 @@
  
 <div class="menu-wrap">
   
-    <div id="services" {% if page.title == "Services" %}class="on"{% endif %}>
+    <div id="services">
         <div class="sp_wrap">
            <ul>
                 <li class="services">
@@ -142,11 +142,69 @@
         </div>
     </div>
 
+
+
+
+
+{% if page.title == 'Services' %}
+    <div id="servicesServices">
+        <div class="sp_wrap">
+           <ul>
+                <li class="services">
+                    <a href="/services"><h6><strong>AH</strong> S01</h6>
+                    <p>International Transport</p></a>
+                </li>
+                <li class="services">
+                    <a href="/services"><h6><strong>AH</strong> S01</h6>
+                    <p>International Transport</p></a>
+                </li>
+                <li class="services">
+                    <a href="/services"><h6><strong>AH</strong> S01</h6>
+                    <p>International Transport</p></a>
+                </li>
+                <li class="services">
+                    <a href="/services"><h6><strong>AH</strong> S01</h6>
+                    <p>International Transport</p></a>
+                </li>
+                <li class="services">
+                    <a href="/services"><h6><strong>AH</strong> S01</h6>
+                    <p>International Transport</p></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endif %}
+
+{% if page.title == 'Products' %}
+    <div id="productsProducts">
+        <div class="sp_wrap">
+           <ul>
+                <li>
+                    <a href="/products"><h6><strong>AH</strong> S01</h6>
+                    <p>International Transport</p></a>
+                </li>
+                <li>
+                    <a href="/products"><h6><strong>AH</strong> S01</h6>
+                    <p>International Transport</p></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endif %}
+
+
+
+
+
+
 </div>
 
 
 
+
+    <div id="page">
       {{ content }}
+    </div>
 
     <footer id="footer-primary" class="footer-primary">
         <div id="footer1"><div id="plane"></div></div>

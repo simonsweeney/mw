@@ -58,6 +58,10 @@
 			height: 100px;
 			position: relative;
 			z-index: 9999;
+			
+			a {
+				cursor: pointer !important;
+			}
 
 			li {
 				@include horizontal-li;
@@ -101,13 +105,12 @@
 	background: white; 
 	z-index: 8888; 
 	height:310px; 
-	-o-transition:.5s;
-	-ms-transition:.5s;
-	-moz-transition:.5s;
-	-webkit-transition:.5s;
 	transition:.5s;
   	padding-top:50px; 
 	opacity: 0;
+	
+	transition:margin-top ease .3s;
+
 	-webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,.3);
 	-moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,.3);
 	box-shadow: 0 8px 6px -6px rgba(0,0,0,.3);
@@ -128,6 +131,8 @@
 		z-index: 9000;
 		opacity: 1;
 	}
+	
+
 
 	li {
 		display:inline-block; 
@@ -159,6 +164,146 @@
 	}
 }
 	
+/* —————————————————————————————————————————————————————————————————————————————————— */
+
+
+
+#services, #products {
+	@include span-columns(12);
+	display: block; 
+	position:absolute; 
+	min-width: 1000px;
+	top:0; 
+	background: white; 
+	z-index: 8888; 
+	height:310px; 
+	transition:.5s;
+  	padding-top:50px; 
+	opacity: 0;
+	
+	transition:margin-top ease .3s;
+
+	-webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,.3);
+	-moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,.3);
+	box-shadow: 0 8px 6px -6px rgba(0,0,0,.3);
+
+	.sp_wrap {
+		padding-top:90px;
+		padding-bottom:20px;
+		@include span-columns(7);
+		@include shift(5);
+	}
+
+	p {
+		margin-top: 15px;
+  		line-height: 1.25em; 
+	}
+
+	&.active { 
+		z-index: 9000;
+		opacity: 1;
+	}
+
+
+	li {
+		display:inline-block; 
+	 	background:white; 
+	 	width: 115px;
+	 	height: 115px;
+		@include omega(5n);
+		margin-right:1%;
+		&:last-child{margin-right:0 !important;}
+		@include pad(10px 2% 4% 10px);
+	}
+}
+
+#services { 
+	li { 
+		background-color: $black;
+		@include link-blue;
+	}
+}
+
+#products { 
+	ul {			
+		margin-left:245px;
+	}
+
+	li { 
+		background-color: $blue;
+		@include link-black;
+	}
+}
+	
+
+
+/* ————————————————————————————————————————————————————————————— */
+
+#servicesServices, #productsProducts {
+	@include span-columns(12);
+	display: block; 
+	position:absolute; 
+	min-width: 1000px;
+	top:0; 
+	background: white; 
+	z-index: 8888; 
+	height:310px; 
+	transition:.5s;
+  	padding-top:50px; 
+	opacity: 1;
+	
+	margin-top:0px; 
+
+	-webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,.3);
+	-moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,.3);
+	box-shadow: 0 8px 6px -6px rgba(0,0,0,.3);
+
+	.sp_wrap {
+		padding-top:90px;
+		padding-bottom:20px;
+		@include span-columns(7);
+		@include shift(5);
+	}
+
+	p {
+		margin-top: 15px;
+  		line-height: 1.25em; 
+	}
+
+	li {
+		display:inline-block; 
+	 	background:white; 
+	 	width: 115px;
+	 	height: 115px;
+		@include omega(5n);
+		margin-right:1%;
+		&:last-child{margin-right:0 !important;}
+		@include pad(10px 2% 4% 10px);
+	}
+}
+
+#servicesServices { 
+	li { 
+		background-color: $black;
+		@include link-blue;
+	}
+}
+
+#productsProducts { 
+	ul {			
+		margin-left:245px;
+	}
+
+	li { 
+		background-color: $blue;
+		@include link-black;
+	}
+}
+
+
+/* —————————————————————————————————————————————————————————————————————————————————— */
+
+/* ————————————————————————————————————————————————————————————— */
 
 
 .content-primary {
@@ -263,7 +408,6 @@
 }
 
 #modal {
-	margin-top:2%;
 	background: white;
 	color: $dark-gray;
 	@include pad(3% 4% 2% 4%);
@@ -298,7 +442,7 @@
 
 
 @media screen and (max-width: 1095px) {
-	#services li, #products li {
+	#servicesServices li, #productsProducts li,	#services li, #products li {
 			width: 100px;
 		 	height: 100px;
 		 	font-size:14px;
@@ -310,36 +454,36 @@
 }
 
 @media screen and (max-width: 1100px) {
-#products ul {
+#products ul, #productsProducts ul {
 		margin-left:225px;
 	}
 }
 @media screen and (max-width: 1200px) {
-#products ul {
+#products ul, #productsProducts ul {
 		margin-left:235px;
 	}
 }
 @media screen and (min-width: 1300px) {
-#services ul {
+#services ul, #servicesServices ul {
 		margin-left:10px;
 	}
-#products ul {
+#products ul, #productsProducts ul {
 		margin-left:245px;
 	}
 
 }
 
 @media screen and (min-width: 1600px) {
-#products ul {
+#products ul, #productsProducts ul {
 		margin-left:295px;
 	}
 }
 
 @media screen and (min-width: 1600px) and (max-width: 1800px) {
-#services ul {
+#services ul, #servicesServices ul {
 		margin-left:25px;
 	}
-#products ul {
+#products ul, #productsProducts ul {
 		margin-left:265px;
 	}
 

@@ -8,24 +8,64 @@ $(document).ready(function () {
   $('#plane').removeClass().addClass(planes[funk]);
 
 
-/// Menu ///
-$('li.products, li.services').hoverIntent(function(){
-  var link = this.getAttribute('class');
-  $('#products, #services').removeClass();
-  $('#'+link).addClass('active');
-  closeMenus(1500);
+
+
+
+
+var menu = {
+  productsOpen : false,
+  servicesOpen : false,
+  pageContainer : $('#page')
+};
+
+$('#products, #services').hide();
+
+$('li.products').on('mouseenter', function(){
+  
+  $('#services').fadeOut(150).removeClass('active'); 
+  menu.servicesOpen = false;
+  
+  if (!menu.productsOpen) {
+    var link = this.getAttribute('class');
+    menu.productsOpen = true;
+    $('#'+link).fadeIn(150).addClass('active');
+  }
 });
 
-closeMenus(1500);
+$('li.services').on('mouseenter', function(){
+  
+  $('#products').fadeOut(150).removeClass('active'); 
+  menu.productsOpen = false;
+  
+  if (!menu.servicesOpen) {
+    var link = this.getAttribute('class');
+    menu.servicesOpen = true;
+    $('#'+link).fadeIn(150).addClass('active');
+  }
+});
 
-function closeMenus(delay){
-  $('#products, #services').off().on('mouseleave', function(){
-    setTimeout(function(){
-       $('#products, #services').removeClass();
-    }, delay);
-    console.log('fired');
-  });
-}
+menu.pageContainer.on('mouseenter', function(){
+  if(menu.productsOpen === true){
+    $('#products').fadeOut(150).removeClass('active'); 
+    menu.productsOpen = false;
+  } 
+  if(menu.servicesOpen === true) {
+    $('#services').fadeOut(150).removeClass('active'); 
+    menu.servicesOpen = false;
+  }
+});
+
+// then this is the
+$(window).on('load', function(){
+  var address = document.location.pathname;
+  if (address.indexOf('products') === true) {
+    menu.productsOpen = true;
+    $('#products').fadeIn(0).addClass('active');    
+  } else if (address.indexOf('services') === true) {
+    menu.servicesOpen = true;
+    $('#services').fadeIn(0).addClass('active');     
+  }
+});
 
 }); /// End of document.ready ///
 
@@ -48,7 +88,7 @@ setInterval(function(){
     .appendTo('#fader');
     console.log('Shōsei');
   });
-}, 4000);
+}, 5000);
 
 
 
