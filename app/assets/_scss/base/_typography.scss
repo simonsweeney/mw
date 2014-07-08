@@ -1,13 +1,11 @@
 body {
   color: $base-font-color;
-  font-family: $base-font-family;
+  font-family: UniversLTPro-45Light;
   font-size: $base-font-size;
-  -webkit-font-smoothing: antialiased;
   line-height: $base-line-height;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $header-font-family;
   line-height: 1.25em;
   margin: 0;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
@@ -15,35 +13,55 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: $base-font-size * 2.25; // 16 * 2.25 = 36px;
+    font-family: UniversLTPro-65Bold;
+
 }
 
 h2 {
   font-size: $base-font-size * 2.5; // 16 * 2.5 = 40px
+  font-family: UniversLTPro-45Light;
+
 }
 
 h3 {
   font-size: $base-font-size * 1.75; // 16 * 1.75 = 28px
+  font-family: UniversLTPro-45Light;
+
   color: $blue;
   font-weight: normal;
 }
 
 h4 {
   font-size: $base-font-size * 1.5; // 16 * 1.5 = 24px
+  font-family: UniversLTPro-45Light;
+
+  strong {
+        font-family: UniversLTPro-65Bold;
+
+  }
 }
 
 h5 {
-  font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px
+  font-size: $base-font-size * 1.15; // 16 * 1.25 = 20px
+  font-family: UniversLTPro-45Light;
 }
 
 h6 {
   font-size: $base-font-size;
+  font-family: UniversLTPro-45Light;
 }
 
 p {
+    font-family: UniversLTPro-45Light;
+
   margin: 0 0 ($base-line-height * .5);  
 }
 
+strong {
+  font-family: UniversLTPro-65Bold;
+}
 .secondary {
+  font-family: UniversLTPro-45Light;
   font-size: $base-font-size * 0.7;
   line-height: 1.5em; 
 }

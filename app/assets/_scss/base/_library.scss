@@ -151,6 +151,8 @@ section#h4{
 		@include span-columns(6 of 10);
 		width:60%;
 		margin: 0;
+		height: 430px;
+		overflow: hidden;
 	}
 }
 
@@ -504,7 +506,7 @@ section#s4 {
 				a{
 					
 					&.active {
-	      			font-weight:bold;
+	      			font-family: UniversLTPro-65Bold;
 	    			}
 				}
 
@@ -539,6 +541,19 @@ section#s4 {
 	}
 }
 
+
+section#p3 {
+	div.wrap {
+		@include span-columns(8);
+		@include shift(2);
+		@include pad(50px 50px 50px 50px);
+		background-color: $blue;
+		font-size: $base-font-size * 1.25; 
+
+	}
+
+
+}
 
 
 /* ------------------------------------------------------ News -- */

@@ -71,7 +71,7 @@ $(window).on('load', function(){
 
 
 /// Modal ///
-$('#launch').leanModal();
+$('.launch').leanModal();
 
 
 /// Slider ///

@@ -140,7 +140,7 @@
 	 	width: 115px;
 	 	height: 115px;
 		@include omega(5n);
-		margin-right:1%;
+		margin-right:5px;
 		&:last-child{margin-right:0 !important;}
 		@include pad(10px 2% 4% 10px);
 	}
@@ -211,7 +211,7 @@
 	 	width: 115px;
 	 	height: 115px;
 		@include omega(5n);
-		margin-right:1%;
+		margin-right:5px;
 		&:last-child{margin-right:0 !important;}
 		@include pad(10px 2% 4% 10px);
 	}
@@ -276,7 +276,7 @@
 	 	width: 115px;
 	 	height: 115px;
 		@include omega(5n);
-		margin-right:1%;
+		margin-right:5px;
 		&:last-child{margin-right:0 !important;}
 		@include pad(10px 2% 4% 10px);
 	}
@@ -322,7 +322,7 @@
 
 	#name {
 		font-size: 15px;
-		line-height: $base-line-height * 0.70; 
+		line-height: $base-line-height * 0.80; 
 	}
 
 	#footer1 {
