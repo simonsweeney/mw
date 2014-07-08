@@ -266,7 +266,7 @@ module.exports = function (grunt) {
           commit: true,
           push: true,
           message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%',
-          remote: 'git@github.com:simonsweeney/mw.git',
+          remote: 'git@github.com:simonsweeney/an.git',
           branch: 'gh-pages'
         }
       }
@@ -277,15 +277,15 @@ module.exports = function (grunt) {
           patterns: [
             {
               match: /("|'?)\/?assets\//g,
-              replacement: '$1http://simonsweeney.github.io/mw/assets/'
+              replacement: '$1http://simonsweeney.github.io/an/assets/'
             },
             {
               match: /(<a[^>]*href="?)(\/)/g,
-              replacement: '$1http://simonsweeney.github.io/mw/'
+              replacement: '$1http://simonsweeney.github.io/an/'
             },
             {
               match: /(<form[^>]*action="?)(\/)/g,
-              replacement: '$1http://simonsweeney.github.io/mw/'
+              replacement: '$1http://simonsweeney.github.io/an/'
             }
           ]
         },
